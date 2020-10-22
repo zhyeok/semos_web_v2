@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "나눔스퀘어";
+  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.side_bar {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.semos {
+  margin-left: 24%;
+  margin-right: 24%;
+  
+}
+
+.search {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.top {
+  position: fixed;
+  border: 0.5vw solid white; 
+  padding-top: 2% ;
+  padding-bottom: 2% ;
+  background-color: white;
+  border-bottom: 0.3vw solid #4279bd ;
+}
+
+.center {
+  display: inline-block;
+  width: 48%;
+  margin-left: 1%;
+  margin-bottom: 5%;
+  
+}
+
+.product_img {
+  display: inline-block;
+}
+
+.intro {
+  display: inline-block;
+  width: 55%;
+}
+
+.intro_pay {
+  display: inline-block;
+  width: 40%;
+}
+
+.product{
+  border: 0.5vw solid #eeeeee;
+}
+
+.intro p {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.intro_pay p {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.address {
+  vertical-align: middle;
+}
+
+.heart {
+  vertical-align: middle;
+}
+
+.product_word {
+  font-size: 4vw;
+  color: #4279bd;
+  margin-left: 1%;
+}
+
+.product_small_word {
+  font-size: 3vw;
+  color: #7a7a7a;
+  margin-left: 1%;
+}
+
+.center_word {
+  font-size: 3.5vw;
+  color: #ec3b4d;
+}
+
+.coach_word {
+  font-size: 3.5vw;
+  color: #ec3b4d;
+}
+
+.coach {
+  display: inline-block;
+  width: 48%;
+  margin-left: 2%;
+  margin-bottom: 5%;
+
+}
+
+.list_top p {
+  margin-left: 2.5%;
+  font-size: 5vw;
+  color: #4279bd;
+}
+
+.my_pick {
+  padding-top: 17vw;
+  padding-bottom: 7%;
+}
+
+button  {
+  border: none;
+  border-radius: 10% / 40%;
+  width: 30%;
+  margin-left: 35% ;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  margin-bottom: 3%;
+  background-color: #ec3b4d;
+  position: fixed;
+  bottom: 0;
+}
+
+button div p {
+  margin: 0.5%;
+  font-size: 3vw;
+  color: white;
+  vertical-align: middle;
+}
+
+button div a {
+  color: white;
+}
+

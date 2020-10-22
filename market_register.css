@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "나눔스퀘어";
+  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.side_bar {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.semos {
+  margin-left: 24%;
+  margin-right: 24%;
+  
+}
+
+.search {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.top {
+  position: fixed;
+  border: 0.5vw solid white; 
+  padding-top: 2% ;
+  padding-bottom: 2% ;
+  background-color: white;
+  border-bottom: 0.3vw solid #4279bd ;
+}
+
+.register {
+  padding-top: 19vw ;
+}
+
+.register button {
+  width: 29%;
+  height: 28vw;
+  margin-left: 2.5%;
+}
+
+.register button img {
+  vertical-align: middle;
+  margin: 0;
+}
+
+.word p {
+  width: 27.5%;
+  display: inline-block;
+  
+  color: #7a7a7a;
+  font-size: 4vw;
+}
+
+.word a {
+  width: 19%;
+  display: inline-block;
+  margin-bottom: 4%;
+  margin-top: 2%;
+  text-align: center;
+  color: #7a7a7a;
+  font-size: 3vw;
+}
+
+.register_word div img {
+  vertical-align: middle;
+}
+
+.word h4 {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2.5%;
+  color: #7a7a7a;
+  font-size: 3.5vw;
+}
+
+.word input {
+  width: 65%;
+  font-size: 3vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  vertical-align: middle;
+  border: none;
+  color: #eeeeee;
+}
+
+.word {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 95%;
+  margin-left: 2.5%;
+  border-bottom: 0.3vw solid #eeeeee;
+}
+
+.register_word {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.area textarea {
+  width: 95%;
+  margin-left: 2.5%;
+  border: 0.2vw solid #7a7a7a;
+  font-size: 3vw;
+  resize: none;
+  overflow: scroll;
+  height: 40vw;
+}
+
+.register_button {
+  width: 95%;
+  margin-left: 2.5%;
+  height: 12vw;
+  font-size: 5vw;
+  text-align: center;
+  border: none;
+  border-radius: 5% / 40%;
+}
+
+.register_button p {
+  margin: 0;
+  vertical-align: middle;
+  color: #7a7a7a ;
+}

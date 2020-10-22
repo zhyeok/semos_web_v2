@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "나눔스퀘어" scr: url(Nanum/NanumSquareB.ttf) format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.menu {
+  
+  border: 0.5vw solid #eeeeee;
+}
+
+.menu_img {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+.home_img {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  
+}
+
+.search_bar {
+  border: 0.5vw solid #eeeeee;
+  
+}
+
+.word {
+  font-size: 3vw;
+  color: #7a7a7a;
+  margin: 2.5%;
+  display: inline-block;
+}
+
+.search_icon {
+ vertical-align: middle;
+ margin-left: 28%;
+}
+
+.slide {
+  margin: 0;
+  border: 0.5vw solid #eeeeee;
+  padding: 0;
+}
+
+.slide_img {
+  
+}
+
+.sport_word {
+  display: inline-block;
+  font-size: 3vw;
+}
+
+.sport {
+  display: inline-block;
+  width: 20%;
+  margin: 2.1%;
+  text-align: center;
+  
+}
+
+.sport_icon {
+  display: inline-block;
+  
+}
+
+.select {
+  display: inline-block;
+  border: 0.5vw solid #eeeeee;
+}
+
+.center {
+  display: inline-block;
+  width: 48%;
+  margin-left: 1%;
+}
+
+.product_img {
+  display: inline-block;
+}
+
+.intro {
+  display: inline-block;
+  width: 48%;
+  
+  
+}
+
+.intro p {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.address {
+  vertical-align: middle;
+}
+
+.heart {
+  vertical-align: middle;
+}
+
+.product_word {
+  font-size: 4vw;
+  color: #4279bd;
+  margin-left: 1%;
+}
+
+.product_small_word {
+  font-size: 3vw;
+  color: #7a7a7a;
+  margin-left: 1%;
+}
+
+.center_word {
+  font-size: 4vw;
+  color: #4279bd;
+}
+
+.coach_word {
+  font-size: 4vw;
+  color: #EC3B4D;
+}

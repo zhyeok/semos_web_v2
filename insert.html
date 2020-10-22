@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>semos_center</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="insert.css">
+</head>
+<body>
+
+  <div class="top">
+    <a href="menu.html">        
+      <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
+    </a>  
+
+    <a href="index.html" class="semos">
+      <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
+    </a>  
+    
+  </div>
+
+  <form action="index.php" method="POST">
+    
+    <div>
+      <p style="display: inline-block;">센터이름 :</p>
+      <input type="text" name="name" placeholder="ex 세모스센터" required />
+    </div>
+    
+    <div>
+      <p style="display: inline-block;">센터주소 :</p>
+      <input type="text" name="address" placeholder="ex 경기도 수원시 영통구" required />
+    </div>
+
+    <div>
+      <p style="display: inline-block;">센터 전화번호 :</p>
+      <select name="phone_number" required>
+        <option selected hidden value="">선택</option>
+        <option value="02">02</option>
+        <option value="031">031</option>
+        <option value="032">032</option>
+        <option value="033">033</option>
+        <option value="041">041</option>
+        <option value="042">042</option>
+        <option value="043">043</option>
+        <option value="044">044</option>
+        <option value="051">051</option>
+        <option value="052">052</option>
+        <option value="053">053</option>
+        <option value="054">054</option>
+        <option value="055">055</option>
+        <option value="061">061</option>
+        <option value="062">062</option>
+        <option value="063">063</option>
+        <option value="064">064</option>    
+      </select>
+      
+      <input type="text" name="phone_number_2" required />
+    </div>
+
+    <div>
+      <p style="display: inline-block;">스포츠 카테고리 :</p>
+      <select name="category" required>
+        <option selected hidden value="">선택</option>
+        <option value="수영">수영</option>
+        <option value="스쿠버다이빙">스쿠버다이빙</option>
+        <option value="서핑">서핑</option>
+        <option value="수상레저">수상레저</option>
+        <option value="카약">카약</option>
+      </select>
+    </div>
+  
+
+    <div style="margin-top: 5%;">
+      <input type="submit" value="완료"/>
+    </div>
+
+ 
+  </form>
+
+</body>
+</html>

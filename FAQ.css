@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "나눔스퀘어";
+  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.side_bar {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.semos {
+  margin-left: 24%;
+  margin-right: 24%;
+  
+}
+
+
+
+.top {
+  position: fixed;
+  border: 0.5vw solid white; 
+  padding-top: 2% ;
+  padding-bottom: 2% ;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  font-family: "나눔스퀘어", "Nanum Gothic";
+}
+
+body a {
+  text-decoration: none;
+}
+
+.category {
+  margin: 0;
+  background-color: #eeeeee;
+  text-align: center;
+  border-bottom: 0.2vw solid #7a7a7a;
+  padding-top: 12%;
+}
+
+.category p{
+  font-size: 5vw;
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #7a7a7a;
+}
+
+form input {
+  font-size: 3vw;
+}
+
+.option {
+  text-align: center;
+  border-bottom: 0.5vw solid #eeeeee ;
+  padding-bottom: 3%;
+}
+
+.option p {
+  display: inline-block;
+  font-size: 4vw;
+  color: #7a7a7a;
+}
+
+.option_1 {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.option_1 select {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 0.3vw solid #4279bd;
+  border-radius: 3% / 30%;
+  font-size: 3vw;
+  color: #7a7a7a;
+  margin-bottom: 5%;
+}
+
+.notice {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 0.5vw solid #eeeeee;
+  padding-left: 2.5%;
+  color: #7a7a7a;
+}
+
+.notice p {
+  display: inline-block;
+  color: #7a7a7a;
+  font-size: 4vw;
+}
+
+.search {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-left: 2.5%;
+  color: #7a7a7a;
+  font-size: 3vw;
+  border-bottom: 0.5vw solid #eeeeee;
+}
+
+.search_icon {
+  vertical-align: middle;
+}
+.search_place {
+  width: 70%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-right: 17%;
+  border: none;
+}

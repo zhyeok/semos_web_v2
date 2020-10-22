@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "나눔스퀘어";
+  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.side_bar {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.semos {
+  margin-left: 24%;
+  margin-right: 24%;
+  
+}
+
+
+
+.top {
+  position: fixed;
+  border: 0.5vw solid white; 
+  padding-top: 2% ;
+  padding-bottom: 2% ;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  font-family: "나눔스퀘어", "Nanum Gothic";
+}
+
+body a {
+  text-decoration: none;
+}
+
+.category {
+  margin: 0;
+  background-color: #eeeeee;
+  text-align: center;
+  border-bottom: 0.2vw solid #7a7a7a;
+  padding-top: 12%;
+}
+
+.category p{
+  font-size: 5vw;
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #7a7a7a;
+}
+
+.search_icon {
+  vertical-align: middle;
+  margin-left: 18%;
+}
+
+.search_bar {
+  width: 70%;
+  margin-left: 2.5%;
+  height: 6vw;
+  border: none;
+  font-size: 3vw;
+}
+
+.search {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.sport_word {
+  display: inline-block;
+  font-size: 3vw;
+}
+
+.sport {
+  display: inline-block;
+  width: 20%;
+  margin: 2.1%;
+  text-align: center;
+  
+}
+
+.sport_icon {
+  display: inline-block;
+  
+}
+
+.select {
+  display: inline-block;
+  border: 0.5vw solid #eeeeee;
+}
+
+.center_intro p {
+  font-size: 3vw;
+  display: inline-block;
+  margin-left: 2.5%;
+  color: #7a7a7a;
+}
+
+.center_count {
+  margin-left: 35% ;
+  vertical-align: middle;
+}
+
+.center_intro {
+  margin-top: 3%;
+  vertical-align: middle;
+  margin-bottom: 3%;
+}
+
+.center {
+  display: inline-block;
+  width: 48%;
+  margin-left: 1%;
+  margin-bottom: 5%;
+  
+}
+
+.product_img {
+  display: inline-block;
+}
+
+.intro {
+  display: inline-block;
+  width: 55%;
+}
+
+.intro_pay {
+  display: inline-block;
+  width: 40%;
+}
+
+.product{
+  border: 0.5vw solid #eeeeee;
+}
+
+.intro p {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.intro_pay p {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.address {
+  vertical-align: middle;
+}
+
+.heart {
+  vertical-align: middle;
+}
+
+.product_word {
+  font-size: 4vw;
+  color: #4279bd;
+  margin-left: 1%;
+}
+
+.product_small_word {
+  font-size: 3vw;
+  color: #7a7a7a;
+  margin-left: 1%;
+}
+
+.center_word {
+  font-size: 3.5vw;
+  color: #ec3b4d;
+}
+
+.coach_word {
+  font-size: 3.5vw;
+  color: #ec3b4d;
+}
+
+.coach {
+  display: inline-block;
+  width: 48%;
+  margin-left: 2%;
+  margin-bottom: 5%;
+
+}
+
+.list_top p {
+  margin-left: 2.5%;
+  font-size: 5vw;
+  color: #4279bd;
+}
+

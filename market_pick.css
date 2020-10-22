@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "나눔스퀘어";
+  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.side_bar {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.semos {
+  margin-left: 24%;
+  margin-right: 24%;
+  
+}
+
+.search {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.top {
+  position: fixed;
+  border: 0.5vw solid white; 
+  padding-top: 2% ;
+  padding-bottom: 2% ;
+  background-color: white;
+  border-bottom: 0.3vw solid #eeeeee ;
+}
+
+
+
+.select p {
+  width: 70%;
+  display: inline-block;
+  margin-left: 2.5%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.select button {
+  width: 20%;
+  margin-left: ;
+  background-color: white;
+  border: 0.2vw solid #7a7a7a;
+  border-radius: 10% / 40%;
+}
+
+.select button p {
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 3vw;
+  color: #7a7a7a;
+  width: 75%;
+}
+
+.select {
+  padding-top: 11vw;
+  margin-bottom: 1%;
+  border-bottom: 0.3vw solid #4279bd;
+
+}
+
+.center_intro p {
+  font-size: 3vw;
+  display: inline-block;
+  margin-left: 2.5%;
+  color: #7a7a7a;
+}
+
+.center_count {
+  margin-left: 35% ;
+  vertical-align: middle;
+}
+
+.center_intro {
+  margin-top: 3%;
+  vertical-align: middle;
+  margin-bottom: 3%;
+}
+
+.center_list {
+  margin-top: 5%;
+}
+
+.center {
+  display: inline-block;
+  width: 48%;
+  margin-left: 1%;
+  margin-bottom: 5%;
+  
+}
+
+.product_img {
+  display: inline-block;
+}
+
+.intro {
+  display: inline-block;
+  width: 48%;
+  
+  
+}
+
+.product{
+  border: 0.5vw solid #eeeeee;
+}
+
+.intro p {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 3vw;
+  color: #7a7a7a;
+}
+
+.address {
+  vertical-align: middle;
+}
+
+.heart {
+  vertical-align: middle;
+}
+
+.product_word {
+  font-size: 4vw;
+  color: #ec3b4d;
+  margin-left: 1%;
+}
+
+.product_small_word {
+  font-size: 3vw;
+  color: #7a7a7a;
+  margin-left: 1%;
+}
+
+.center_word {
+  font-size: 3.5vw;
+  color: #ec3b4d;
+}
+
+.coach_word {
+  font-size: 3.5vw;
+  color: #ec3b4d;
+}
+
+.coach {
+  display: inline-block;
+  width: 48%;
+  margin-left: 2%;
+  margin-bottom: 5%;
+
+}
