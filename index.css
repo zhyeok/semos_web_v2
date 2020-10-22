@@ -1,5 +1,6 @@
 @font-face {
-  font-family: "나눔스퀘어" scr: url(Nanum/NanumSquareB.ttf) format('truetype');
+  font-family: "나눔스퀘어";
+  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
@@ -13,29 +14,34 @@ body a {
   text-decoration: none;
 }
 
-.menu {
-  
-  border: 0.5vw solid #eeeeee;
-}
-
-.menu_img {
+.side_bar {
   margin-left: 2.5%;
   margin-right: 2.5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-
 }
 
-.home_img {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 25%;
+.semos {
+  margin-left: 24%;
+  margin-right: 24%;
   
+}
+
+.search {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.top {
+  position: fixed;
+  border: 0.5vw solid white; 
+  padding-top: 2% ;
+  padding-bottom: 2% ;
+  background-color: white;
+  border-bottom: 0.3vw solid #4279bd ;
 }
 
 .search_bar {
   border: 0.5vw solid #eeeeee;
-  
+  padding-top: 10vw;
 }
 
 .word {
@@ -43,11 +49,12 @@ body a {
   color: #7a7a7a;
   margin: 2.5%;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .search_icon {
  vertical-align: middle;
- margin-left: 28%;
+ margin-left: 22%;
 }
 
 .slide {
@@ -131,11 +138,32 @@ body a {
 }
 
 .center_word {
-  font-size: 4vw;
+  font-size: 3.5vw;
   color: #4279bd;
 }
 
 .coach_word {
-  font-size: 4vw;
+  font-size: 3.5vw;
   color: #EC3B4D;
 }
+
+.register {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+
+.register button {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #eeeeee;
+  border: 0.3vw solid #4279bd;
+  border-radius: 10% / 30%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.register a {
+  color: #4279bd;
+  font-size: 4vw;
+  

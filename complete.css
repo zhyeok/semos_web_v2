@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "나눔스퀘어";
+    src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+  
+  body {
+    font-family: "나눔스퀘어", "Nanum Gothic";
+    margin: 0;
+  }
+  
+  body a {
+    text-decoration: none;
+  }
+  
+  .side_bar {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  
+  .semos {
+    margin-left: 24%;
+    margin-right: 24%;
+    
+  }
+  
+  .search {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  
+  .top {
+    position: fixed;
+    border: 0.5vw solid white; 
+    padding-top: 2% ;
+    padding-bottom: 2% ;
+    background-color: white;
+    border-bottom: 0.3vw solid #4279bd ;
+  }
+
+.complete_massage {
+    padding-top: 20vw;
+    text-align: center;
+    font-size: 5vw;
+    color: #4279bd;
+    border-bottom: 0.5vw solid #eeeeee;
+    padding-bottom: 5%;
+}
+
+.complete_massage p {
+    display: inline-block;
+    margin: 5% 5% 5% 5%;
+}
+
+.complete_massage a {
+    text-decoration: none;
+    color: #ec3b4d;
+    font-size: 3vw;
+    
+}
+
+.complete_massage button {
+    width: 38%;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 5% / 30%;
+    padding: 1% 0 1% 0;
+    
+    
+}

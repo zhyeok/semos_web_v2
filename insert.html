@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="insert.css">
 </head>
 <body>
-
+  
   <div class="top">
     <a href="menu.html">        
       <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
@@ -16,6 +16,11 @@
       <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
     </a>  
     
+  </div>
+  
+  <div class="center_register">
+    <p style="font-size: 5vw; text-align: center;"><b>세모스 센터 등록</b></p>
+    <p><b>센터 정보를 정확히 적어주세요!</b></p>
   </div>
 
   <form action="index.php" method="POST">
@@ -53,13 +58,13 @@
         <option value="064">064</option>    
       </select>
       
-      <input type="text" name="phone_number_2" required />
+      <input style="width: 40%;" type="text" name="phone_number_2" placeholder="1234-5678" required />
     </div>
 
     <div>
       <p style="display: inline-block;">스포츠 카테고리 :</p>
       <select name="category" required>
-        <option selected hidden value="">선택</option>
+        <option selected hidden value="">카테고리</option>
         <option value="수영">수영</option>
         <option value="스쿠버다이빙">스쿠버다이빙</option>
         <option value="서핑">서핑</option>
@@ -69,8 +74,8 @@
     </div>
   
 
-    <div style="margin-top: 5%;">
-      <input type="submit" value="완료"/>
+    <div class="submit_div" style="margin-top: 5%;">
+      <input class="submit" type="submit" value="완료"/>
     </div>
 
  

@@ -39,22 +39,62 @@ body a {
   border-bottom: 0.3vw solid #4279bd ;
 }
 
-form {
-  padding-top: 10vw ;
+.center_register {
+  padding-top: 10vw;
+  font-size: 3vw;
+  color: #4279bd;
+}
+
+.center_register p{
   padding-left: 2.5%;
+}
+
+form {
+  padding-left: 2.5%;
+  padding-bottom: 5%;
+  border-bottom: 0.3vw solid #eeeeee;
 }
 
 form p {
   font-size: 4vw;
   color: #7a7a7a;
-  
+  margin-right: 2.5%;
 }
 
 form input {
   width: 50%;
   font-size: 4vw;
+  margin-left:2.5% ;
+  padding-left: 2.5%;
+  padding: 1%; 
+  text-decoration: none;
+  border: 0.3vw solid #4279bd;
+  color: #7a7a7a;
 }
 
 form select {
   font-size: 4vw;
+  color: #7a7a7a;
+  padding: 1%;
+  text-align: center;
+  border: 0.3vw solid #4279bd;
+}
+
+form select option {
+  font-size: 4vw;
+}
+
+.submit {
+  width: 30%;
+  background-color: #4279bd;
+  font-size: 4vw;
+  color: white;
+  border: none;
+  border-radius: 10% / 30%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.submit_div {
+  text-align: center;
 }
