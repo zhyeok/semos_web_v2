@@ -23,7 +23,7 @@
     <p><b>센터 정보를 정확히 적어주세요!</b></p>
   </div>
 
-  <form action="index.php" method="POST">
+  <form action="index.php" enctype="multipart/form-data" method="POST">
     
     <div>
       <p style="display: inline-block;">센터이름 :</p>
@@ -73,6 +73,10 @@
       </select>
     </div>
   
+    <div>
+      <p style="display: inline-block;">업로드 이미지 :</p>
+      <input style="font-size: 3vw;" type="file" name="img">
+    </div>
 
     <div class="submit_div" style="margin-top: 5%;">
       <input class="submit" type="submit" value="완료"/>
