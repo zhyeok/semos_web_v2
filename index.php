@@ -10,7 +10,7 @@ $category = "center";
 $uploads_dir = "./img/$category";
 
 $img_name = $_FILES['img']['name'];
-$uploadfile = $_FILES['img']['tmp_name'];
+
 $file_link = "$uploads_dir/$img_name";
 
 $name = $_POST['name'];
