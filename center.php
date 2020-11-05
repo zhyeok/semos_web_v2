@@ -16,29 +16,38 @@
   $dbname = "semos";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
+  $filtered_type = mysqli_real_escape_string($conn, $_GET['type']);
+  $filtered_sport = mysqli_real_escape_string($conn, $_GET['sport']);
   $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
   if(isset($_GET['id'])) {
-    $sql = "SELECT * FROM center WHERE category = '{$filtered_id}' ORDER BY id DESC ";
+    $sql = "SELECT * FROM $filtered_type WHERE category = '{$filtered_id}' AND sport = '{$filtered_sport}' ORDER BY id DESC ";
   } else {
-    $sql = "SELECT * FROM center";
+  $sql = "SELECT * FROM $filtered_type WHERE sport = '{$filtered_sport}' ";
   }
   $result = mysqli_query($conn, $sql);
   $count = mysqli_num_rows($result);
   $list = '';
-
-
+  
+  $sql2 = "SELECT * FROM sport WHERE type = '{$filtered_sport}'";
+  $result2 = mysqli_query($conn, $sql2);
+  
 
   while($row = mysqli_fetch_array($result)) {
     $list = $list."<div class='product'>
     <img src=\"{$row['img']}\" width='90%'/></br>
-    <a href=\"index.php?id={$row['id']}\">[{$row['category']}] {$row['center_name']}</a></br>
-    <p>위치 :{$row['center_address']}</p>
+    <a href=\"index.php?id={$row['id']}\">[{$row['category']}] {$row['name']}</a></br>
+    <p>위치 :{$row['address']}</p>
     <p>전화번호 : {$row['phone_number']}) {$row['phone_number_2']}</p>
     </div>";
   }
   
-  
+  $link = '';
+  while($row2 = mysqli_fetch_array($result2)) {
+    $link = $link."<a href=\"center.php?id={$row2['sport']}&type=$filtered_type&sport=$filtered_sport\"><b>{$row2['sport']}</b></a>";
+  }
 
+  $select = "<a href=\"center.php?type=center&sport=$filtered_sport\">센터 선택</a>
+  <a href=\"center.php?type=coach&sport=$filtered_sport\">강사 선택</a>";
 
   ?>
 
@@ -59,15 +68,11 @@
   </div>
 
   <div class="category">
-    <p><b>센터 선택</b></p>
+    <?=$select?>
   </div>
 
   <div class="center_category">
-    <a href="center.php?id=수영"><b>수영</b></a>
-    <a href="center.php?id=서핑"><b>서핑</b></a>
-    <a href="center.php?id=스쿠버다이빙"><b>스쿠버다이빙</b></a>
-    <a href="center.php?id=수상레저"><b>수상레져</b></a>
-    <a href="center.php?id=카약"><b>카약</b></a>
+    <?=$link?>
   </div>
 
   <div class="slider">

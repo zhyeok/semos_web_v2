@@ -6,36 +6,38 @@ $password = "ily153153";
 $dbname = "semos";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-$category = "center";
-$uploads_dir = "./img/$category";
-
-$img_name = $_FILES['img']['name'];
-
-$file_link = "$uploads_dir/$img_name";
-
-$name = $_POST['name'];
-$address = $_POST['address'];
-$phone_number = $_POST['phone_number'];
-$phone_number_2 = $_POST['phone_number_2'];
 $category = $_POST['category'];
+$img_name = $_FILES['img']['name'];
+$type = $_GET['type'];
+$uploads_dir = "./img/$type";
+
+$filtered = array(
+  'name'=> mysqli_real_escape_string($conn, $_POST['name']),
+  'address'=> mysqli_real_escape_string($conn, $_POST['address']),
+  'phone_number'=> mysqli_real_escape_string($conn, $_POST['phone_number']),
+  'phone_number_2'=> mysqli_real_escape_string($conn, $_POST['phone_number_2']),
+  'category'=> mysqli_real_escape_string($conn, $_POST['category']),
+  'file_link'=> mysqli_real_escape_string($conn, "$uploads_dir/$img_name"),
+  'type' => mysqli_real_escape_string($conn, $_POST['type']),
+  'upload' => mysqli_real_escape_string($conn, $uploads_dir)
+);
 
 
 
-if(!is_dir($uploads_dir)) 
+
+
+
+
+if(!is_dir("{$filtered['upload']}")) 
 {
-  mkdir($uploads_dir);
+  mkdir("{$filtered['upload']}");
 
-  if(move_uploaded_file($_FILES['img']['tmp_name'],"$file_link")) 
+  if(move_uploaded_file($_FILES['img']['tmp_name'],"{$filtered['file_link']}")) 
   {
-    $sql = "INSERT INTO center(center_name, center_address, category, phone_number, phone_number_2, img)
-    VALUES('$name', '$address', '$category', '$phone_number', '$phone_number_2', '$file_link')";
+    $sql = "INSERT INTO $type (name, address, category, phone_number, phone_number_2, img, sport)
+    VALUES('{$filtered['name']}', '{$filtered['address']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['file_link']}', '{$filtered['type']}')";
     $result = mysqli_query($conn,$sql);
-    if ($conn->query($sql) === TRUE) {
-      echo("<script>location.replace('complete.html');</script>");
-    } else {
-      echo "Error: ".$sql."<br>".$conn->error;
-    }
-    
+    echo("<script>location.replace('complete.html');</script>");
   } 
   else
   {
@@ -46,14 +48,10 @@ else
 {
   if(move_uploaded_file($_FILES['img']['tmp_name'],"$uploads_dir/$img_name")) 
   {
-    $sql = "INSERT INTO center(center_name, center_address, category, phone_number, phone_number_2, img)
-    VALUES('$name', '$address', '$category', '$phone_number', '$phone_number_2', '$file_link')";
+    $sql = "INSERT INTO $type (name, address, category, phone_number, phone_number_2, img, sport)
+    VALUES('{$filtered['name']}', '{$filtered['address']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['file_link']}', '{$filtered['type']}')";
     $result = mysqli_query($conn,$sql);
-    if ($conn->query($sql) === TRUE) {
-      echo("<script>location.replace('complete.html');</script>");
-    } else {
-      echo "Error: ".$sql."<br>".$conn->error;
-    }
+    echo("<script>location.replace('complete.html');</script>");
   } 
   else
   {
