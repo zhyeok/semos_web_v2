@@ -10,9 +10,9 @@
   margin-right: 2.5%;
 }
 
-.semos  {
-  margin-left: 24%;
-  margin-right: 24%;
+.semos {
+  margin-left: 23%;
+  margin-right: 23%;
   
 }
 
@@ -22,10 +22,12 @@
 }
 
 .top {
-  border: 0.5vw solid #eeeeee; 
+  position: fixed;
+  border: 0.5vw solid white; 
   padding-top: 2% ;
   padding-bottom: 2% ;
-
+  background-color: white;
+  border-bottom: 0.3vw solid #4279bd ;
 }
 
 body {
@@ -42,18 +44,18 @@ body a {
   background-color: #eeeeee;
   text-align: center;
   border-bottom: 0.2vw solid #7a7a7a;
-  padding: 2% 0 2% 0;
+  padding: 13vw 0 2% 0;
 }
 
 .category a{
   font-size: 5vw; 
   color: #7a7a7a;
-  margin: 0 2% 0 2%;
+  margin: 0 5% 0 5%;
   
 }
 
 .center_category a {
-  font-size: 4vw;
+  font-size: 3vw;
   margin-left: 3%;
   margin-right: 3%;
   text-decoration: none;
@@ -80,10 +82,11 @@ body a {
   display: inline-block;
   margin-left: 2.5%;
   color: #7a7a7a;
+  width: 75%;
 }
 
 .center_count {
-  margin-left: 35%;
+  margin-right: 2.5%; 
   vertical-align: middle;
 }
 

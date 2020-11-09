@@ -41,47 +41,63 @@ body a {
 
 .center_register {
   padding-top: 10vw;
+  padding-left: 2.5%;
+}
+
+
+
+form {
+  padding-left: 2.5%;
+}
+
+form p {
   font-size: 3vw;
   color: #4279bd;
 }
 
-.center_register p{
-  padding-left: 2.5%;
+.name input{
+  width: 60%;
+  border: 0.4vw solid #7a7a7a;
 }
 
-form {
-  padding-left: 2.5%;
-  padding-bottom: 5%;
-  border-bottom: 0.3vw solid #eeeeee;
+.address input{
+  width: 60%;
+  border: #7a7a7a;
+  border: 0.4vw solid #7a7a7a;
 }
 
-form p {
-  font-size: 4vw;
+input {
+  font-size: 3vw;
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  border: 0.4vw solid #7a7a7a;
   color: #7a7a7a;
+}
+
+.tel input {
+  width: 10%;
+}
+
+select {
+  font-size: 3vw;
   margin-right: 2.5%;
-}
-
-form input {
-  width: 50%;
-  font-size: 4vw;
-  margin-left:2.5% ;
-  padding-left: 2.5%;
-  padding: 1%; 
-  text-decoration: none;
-  border: 0.3vw solid #4279bd;
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  width: 13%;
   color: #7a7a7a;
+  border: 0.4vw solid #7a7a7a;
 }
 
-form select {
-  font-size: 4vw;
-  color: #7a7a7a;
-  padding: 1%;
-  text-align: center;
-  border: 0.3vw solid #4279bd;
+.category select {
+  width: 25%;
 }
 
-form select option {
-  font-size: 4vw;
+textarea {
+  font-size: 3vw;
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  border: 0.4vw solid #7a7a7a;
+}
+
+.img input{
+  border: none;
 }
 
 .submit {

@@ -1,65 +1,100 @@
-<?php
+<!DOCTYPE html>
+<html>
 
-$servername = "localhost";
-$username = "root";
-$password = "ily153153";
-$dbname = "semos";
+<head>
+  <title>semos.kr</title>
+  <link rel="stylesheet" href="center.css">
+  <meta charset="utf-8">
+</head>
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-$category = $_POST['category'];
-$img_name = $_FILES['img']['name'];
-$type = $_GET['type'];
-$uploads_dir = "./img/$type";
+<body>
 
-$filtered = array(
-  'name'=> mysqli_real_escape_string($conn, $_POST['name']),
-  'address'=> mysqli_real_escape_string($conn, $_POST['address']),
-  'phone_number'=> mysqli_real_escape_string($conn, $_POST['phone_number']),
-  'phone_number_2'=> mysqli_real_escape_string($conn, $_POST['phone_number_2']),
-  'category'=> mysqli_real_escape_string($conn, $_POST['category']),
-  'file_link'=> mysqli_real_escape_string($conn, "$uploads_dir/$img_name"),
-  'type' => mysqli_real_escape_string($conn, $_POST['type']),
-  'upload' => mysqli_real_escape_string($conn, $uploads_dir)
-);
+  <?php
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "ily153153";
+  $dbname = "semos";
+
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+  $category = $_POST['category'];
+  $img_name = $_FILES['img']['name'];
+  $type = $_GET['type'];
+  $uploads_dir = "./img/$type";
+
+  $filtered = array(
+    'name'=> mysqli_real_escape_string($conn, $_POST['name']),
+    'address'=> mysqli_real_escape_string($conn, $_POST['address']),
+    'phone_number'=> mysqli_real_escape_string($conn, $_POST['phone_number']),
+    'phone_number_2'=> mysqli_real_escape_string($conn, $_POST['phone_number_2']),
+    'phone_number_3'=> mysqli_real_escape_string($conn, $_POST['phone_number_3']),
+    'category'=> mysqli_real_escape_string($conn, $_POST['category']),
+    'file_link'=> mysqli_real_escape_string($conn, "$uploads_dir/$img_name"),
+    'type' => mysqli_real_escape_string($conn, $_POST['type']),
+    'upload' => mysqli_real_escape_string($conn, $uploads_dir),
+    'db_type' => mysqli_real_escape_string($conn, $_GET['type']),
+    'facility'=> mysqli_real_escape_string($conn, $_POST['facility']),
+    'weekday'=> mysqli_real_escape_string($conn, $_POST['weekday']),
+    'weekend'=> mysqli_real_escape_string($conn, $_POST['weekend']),
+    'holiday'=> mysqli_real_escape_string($conn, $_POST['holiday']),
+    'information'=> mysqli_real_escape_string($conn, $_POST['information'])
+  );
+  
+  
+  
+  
+  
+  $db_type = $filtered['db_type'];
+  
+ 
 
 
 
 
-
-
-
-if(!is_dir("{$filtered['upload']}")) 
-{
-  mkdir("{$filtered['upload']}");
-
-  if(move_uploaded_file($_FILES['img']['tmp_name'],"{$filtered['file_link']}")) 
+  if(!is_dir("{$filtered['upload']}")) 
   {
-    $sql = "INSERT INTO $type (name, address, category, phone_number, phone_number_2, img, sport)
-    VALUES('{$filtered['name']}', '{$filtered['address']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['file_link']}', '{$filtered['type']}')";
-    $result = mysqli_query($conn,$sql);
-    echo("<script>location.replace('complete.html');</script>");
+    mkdir("{$filtered['upload']}");
+
+    if(move_uploaded_file($_FILES['img']['tmp_name'],"{$filtered['file_link']}")) 
+    {
+      $sql = "INSERT INTO $db_type (name, address, category, phone_number, phone_number_2, phone_number_3, img, sport)
+      VALUES('{$filtered['name']}', '{$filtered['address']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['phone_number_3']}', '{$filtered['file_link']}', '{$filtered['type']}')";
+      $result = mysqli_query($conn,$sql);
+    } 
+    else
+    {
+      echo "등록이 실패 했습니다. 파일을 확인해주세요!<br />";
+    }
   } 
-  else
+  else 
   {
-    echo "등록이 실패 했습니다. 파일을 확인해주세요!<br />";
+    if(move_uploaded_file($_FILES['img']['tmp_name'],"{$filtered['file_link']}")) 
+    {
+      $sql = "INSERT INTO $db_type (name, address, category, phone_number, phone_number_2, phone_number_3, img, sport)
+      VALUES('{$filtered['name']}', '{$filtered['address']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['phone_number_3']}', '{$filtered['file_link']}', '{$filtered['type']}')";
+      $result = mysqli_query($conn,$sql);
+    } 
+    else
+    {
+      echo "등록이 실패 했습니다. 파일을 확인해주세요!<br/>";
+    }
   }
-} 
-else 
-{
-  if(move_uploaded_file($_FILES['img']['tmp_name'],"$uploads_dir/$img_name")) 
-  {
-    $sql = "INSERT INTO $type (name, address, category, phone_number, phone_number_2, img, sport)
-    VALUES('{$filtered['name']}', '{$filtered['address']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['file_link']}', '{$filtered['type']}')";
-    $result = mysqli_query($conn,$sql);
-    echo("<script>location.replace('complete.html');</script>");
-  } 
-  else
-  {
-    echo "등록이 실패 했습니다. 파일을 확인해주세요!<br/>";
-  }
-}
 
+  $sql2 = "SELECT * FROM $type WHERE name = '{$filtered['name']}' ";
+  $result2 = mysqli_query($conn, $sql2);
+  $row2 = mysqli_fetch_array($result2);
 
-?>
+  $page = $db_type._page;
+
+  $sql3 = "INSERT INTO $page (center_id, facility, weekday, weekend, holiday, information)
+  VALUES('{$row2['id']}', '{$filtered['facility']}', '{$filtered['weekday']}', '{$filtered['weekend']}', '{$filtered['holiday']}', '{$filtered['information']}')";
+  $result3 = mysqli_query($conn, $sql3);
+  echo("<script>location.replace('complete.html');</script>");
+  ?>
+  
+</body>
+</html>
+
 
   

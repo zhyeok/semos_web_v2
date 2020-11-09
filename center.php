@@ -35,7 +35,7 @@
   while($row = mysqli_fetch_array($result)) {
     $list = $list."<div class='product'>
     <img src=\"{$row['img']}\" width='90%'/></br>
-    <a href=\"index.php?id={$row['id']}\">[{$row['category']}] {$row['name']}</a></br>
+    <a href=\"{$filtered_type}_intro.php?id={$row['id']}&type=$filtered_type\">[{$row['category']}] </br>{$row['name']}</a></br>
     <p>위치 :{$row['address']}</p>
     <p>전화번호 : {$row['phone_number']}) {$row['phone_number_2']}</p>
     </div>";
@@ -52,20 +52,20 @@
   ?>
 
   <div class="top">
-      
-    <a href="menu.html">
+    <a href="menu.html">        
       <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
-    </a>
-      
-    <a class="semos" href="index.html">
-      <img  src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
-    </a>
+    </a>  
 
+    <a href="index.html" class="semos">
+      <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
+    </a> 
+    
     <a>
       <img class="search" src="아이콘_소스/공통_아이콘/검색.png" width="5%"/>
     </a>
-    
+      
   </div>
+
 
   <div class="category">
     <?=$select?>
@@ -82,7 +82,7 @@
   <div class="center_list">
 
     <div class="center_intro">
-      <p><b>총 <?=$count?>개의 센터가 있습니다.</b></p>
+      <p><b>총 <?=$count?>개의 세모스 파트너가 있습니다.</b></p>
       <img class="center_count" src="아이콘_소스/공통_아이콘/정렬방식.png" width="18%" />
     </div>
     
