@@ -9,28 +9,35 @@
 </head>
 <body>
 
-  <div class="top">
-    <a href="menu.html">        
-      <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
-    </a> 
+  <?php
+    session_start();
+    $user_name = $_SESSION['name'];
+    if(!isset($_SESSION['id']) && !isset($_SESSION['pw'])) {
+      echo "<script>alert('로그인이 필요합니다.'); location.replace('index.php');</script>";;
+    } else {
+      $profile = "";
+      $profile = $profile."<div class='user_profile'> 
+      <img src='./아이콘_소스/공통_아이콘/프로필.png' width='15%' />
+      <div class='profile_word'>
+        <p style='font-size: 5vw;'><b>{$user_name}님</b></p>
+        <p style='font-size: 3vw;'><b>관리자</b></p>
+      </div>
+    </div>";
+    }
+  ?>
 
-    <a href="index.html"class="semos" >
-      <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
+<div class="top">
+    <a href="./menu.html">        
+      <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
     </a>  
 
-      <a>
-        <img class="search" src="아이콘_소스/공통_아이콘/검색.png" width="5%"/>
-      </a>
+    <a href="./index.php" class="semos">
+      <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
+    </a>  
     
   </div>
 
-  <div class="user_profile"> 
-    <img src="아이콘_소스/공통_아이콘/프로필.png" width="15%" />
-    <div class="profile_word">
-      <p style="font-size: 5vw; "><b>민지♥</b></p>
-      <p style="font-size: 3vw;"><b>semos2020@naver.com</b></p>
-    </div>
-  </div>
+  <?=$profile?>
 
   <div class="my_page">
     <div>

@@ -45,7 +45,6 @@ body a {
 }
 
 
-
 form {
   padding-left: 2.5%;
 }
@@ -60,10 +59,40 @@ form p {
   border: 0.4vw solid #7a7a7a;
 }
 
-.address input{
+#sample6_address {
+  width:60%;
+  display: inline-block;
+}
+.search_button {
+  width: 15%;
+  padding: 0;
+  display: inline-block;
+  background-color: #eeeeee
+  color: #7a7a7a;
+}
+
+
+#sample6_detailAddress {
   width: 60%;
-  border: #7a7a7a;
-  border: 0.4vw solid #7a7a7a;
+  margin-left: 16.5%;
+  margin-bottom: 2%;
+}
+
+#sample6_extraAddress {
+  width: 15%;
+  margin-left: 16.5%;
+}
+
+#sample6_sigungu {
+  width: 25.4%;
+}
+
+#sample6_postcode {
+  width: 15%;
+}
+
+.address {
+  margin-bottom: 5%;
 }
 
 input {
@@ -72,6 +101,8 @@ input {
   border: 0.4vw solid #7a7a7a;
   color: #7a7a7a;
 }
+
+
 
 .tel input {
   width: 10%;

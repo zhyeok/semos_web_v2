@@ -17,31 +17,33 @@
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-  $db_code= mysqli_real_escape_string($conn, $_GET['id']);
-  $db_type= mysqli_real_escape_string($conn, $_GET['type']);
+  $code= $_GET['id'];
+  $type= $_GET['type'];
 
-  $sql = "SELECT * FROM $db_type WHERE id = '{$db_code}' ";
+  $sql = "SELECT * FROM $type WHERE id = '{$code}' ";
   $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  $name = $row['name'];
+  $sigungu =  $row['sigungu'];
+  $phone_number = $row['phone_number'];
+  $phone_number_2 = $row['phone_number_2'];
+  $phone_number_3 = $row['phone_number_3'];
+  $category = $row['category'];
+  $img = $row['img'];
+  $sport = $row['sport'];
 
-  $name = mysqli_real_escape_string($conn, $result['name']);
-  $address = mysqli_real_escape_string($conn, $result['address']);
-  $phone_number = mysqli_real_escape_string($conn, $result['phone_number']);
-  $phone_number_2 = mysqli_real_escape_string($conn, $result['phone_number_2']);
-  $phone_number_3 = mysqli_real_escape_string($conn, $result['phone_number_3']);
-  $category = mysqli_real_escape_string($conn, $result['category']);
-  $img = mysqli_real_escape_string($conn, $result['img']);
-  $sport = mysqli_real_escape_string($conn, $result['sport']);
+  $page = $type._page;
 
-  $page = $db_type._page;
-
-  $sql2 = "SELECT * FROM center_page WHERE center_id = '{$db_code}' ";
+  $sql2 = "SELECT * FROM $page WHERE center_id = '{$code}' ";
   $result2 = mysqli_query($conn, $sql2);
-  $facility = mysqli_real_escape_string($conn, $result2['facility']);
-  $weekday = mysqli_real_escape_string($conn, $result2['weekday']);
-  $weekend = mysqli_real_escape_string($conn, $result2['weekend']);
-  $holiday = mysqli_real_escape_string($conn, $result2['holiday']);
-  $information = mysqli_real_escape_string($conn, $result2['information']);
-
+  $row2 = mysqli_fetch_array($result2);
+  $facility = $row2['facility'];
+  $weekday = $row2['weekday'];
+  $weekend = $row2['weekend'];
+  $holiday = $row2['holiday'];
+  $Information = $row2['Information'];
+  $address = $row2['address'];
+  $detail_address = $row2['detail_address'];
   ?>
  
   <div class="top">
@@ -53,14 +55,10 @@
       <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
     </a>  
 
-    <a>
-      <img class="search" src="아이콘_소스/공통_아이콘/검색.png" width="5%"/>
-    </a>
-    
   </div>
 
   <div class= "coach_img">
-    <img src="아이콘_소스/이미지-1.png" width="100%"/>
+    <img src="<?=$img?>" width="100%"/>
   </div>
 
   <div class="coach_intro">
@@ -69,7 +67,8 @@
       <img src="아이콘_소스/공통_아이콘/찜.png" width="5%"/>
       <p><b>0</b></p>
       <img src="아이콘_소스/주소-아이콘.png" width="5%"/>
-      <p><b><?=$address?></b></p>
+      <p><b><?=$sigungu?></b></p>
+      
     </div>
   </div>
 
@@ -92,7 +91,7 @@
 
     <div class="data">
       <img src="아이콘_소스/강사정보-정보-아이콘.png" width="6%"/>
-      <p><b> <?=$information?> </b></p>
+      <p><b> <?=$Information?> </b></p>
     </div>
 
   </div>
@@ -114,13 +113,6 @@
       <p class="required"><b>예약필수</b></p>
     </div>
 
-    <p class="product_word"><b>일반 상품</b></p>
-    
-    <div class="semos_only_product">
-      <p><b>주 1회 어린이 수영 정규반 6개월 +</br>학습진도표 6회</b></p>
-      <p class="required"><b>예약필수</b></p>
-    </div>
-
   </div>
 
   <div class="map">
@@ -128,7 +120,7 @@
     <img class="map_img" src="아이콘_소스/지도-이미지.png" width="95%"/>
     <div class="address">
       <img src="아이콘_소스/주소-아이콘.png" />
-      <p><b>경기도 용인시 기흥구 덕영대로 1732</b></p>
+      <p><b><?=$address?></b></p>
       <button>주소복사</button>
     </div>
 

@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "나눔스퀘어";
+    src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+  
+  .side_bar {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  
+  .semos {
+    margin-left: 24%;
+    margin-right: 24%;
+    
+  }
+  
+  .top {
+    width: 100%;
+    position: fixed;
+    border: 0.5vw solid white; 
+    padding-top: 2% ;
+    padding-bottom: 2% ;
+    background-color: white;
+    border-bottom: 0.3vw solid #4279bd ;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "나눔스퀘어", "Nanum Gothic";
+  }
+  
+  body a {
+    text-decoration: none;
+  }
+
+  .enter {
+    padding-top: 10vw;
+  }
+
+  .subject {
+    margin-left: 2.5%;
+    font-size: 4vw;
+  }
+
+  .register {
+      margin-top: 2.5%;
+      font-size: 4vw;
+  }
+
+  form p {
+      display: inline-block;
+  }
+
+  form {
+      margin-left: 2.5%;
+  }
+
+  select {
+      font-size: 3vw;
+  }
+
+  .caution {
+      font-size: 3vw;
+      color: #7a7a7a;
+      margin-bottom: 3%;
+  }
+
+  article #none {
+    display: none;
+    color: #ec3b4d;
+    font-size: 3vw;
+  }
+  
+  article #yes {
+    display: none;
+    color: #4279bd;
+    font-size: 3vw;
+  }
+  article input {
+    border: 0.3vw solid #4279bd;
+  }
+
+  #user_id {
+    width: 50%;
+  }
+
+  #user_password {
+    width: 50%;
+  }
+
+  .sex {
+    margin: 0;
+    font-size: 4vw;
+    margin-right: 2.5%;
+  }
+
+  #radio {
+    margin-right: 2.5%;
+    width: 4vw;
+    height: 4vw;
+  }
+  
+  .email {
+    width: 40%;
+    font-size: 4vw;
+    margin-right: 2.5%;
+  }
+  select {
+    width: 30%;
+    font-size: 4vw;
+    border: 0.3vw solid #4279bd;
+    margin-left: 2.5%;
+    color: #7a7a7a;
+  }
+
+  .noemail {
+    display: inline-block;
+  }
+
+  .mail {
+    font-size: 4vw;
+    margin: 0;
+  }
+
+  #mail {
+    margin-top: 3%;
+  }
+
+  .submit {
+    
+    font-size: 4vw;
+    color: #4279bd;
+    margin-top: 3%;
+  }
+
+  .button {
+    text-align: center;
+    margin-right: 3%;
+  }

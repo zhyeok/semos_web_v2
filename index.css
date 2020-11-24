@@ -25,10 +25,7 @@ body a {
   
 }
 
-.search {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
+
 
 .top {
   width: 100%;
@@ -40,9 +37,95 @@ body a {
   border-bottom: 0.3vw solid #4279bd ;
 }
 
-.search_bar {
-  border: 0.5vw solid #eeeeee;
-  padding-top: 10vw;
+.login {
+  text-align: center;
+  
+}
+
+.login input{
+  font-size: 4vw;
+  border: 0.3vw solid #4279bd;
+  color: #7a7a7a;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.login form {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.login a {
+  font-size: 3vw;
+  color: #7a7a7a;
+
+}
+
+.login div {
+  text-align: right;
+  margin-bottom: 1%;
+  margin-right: 5%;
+}
+
+.id {
+  width: 30%;
+  margin-right: 2.5%;
+  vertical-align: middle;
+}
+
+.pw {
+  width: 30%;
+  margin-left: 2.5%;
+  vertical-align: middle;
+}
+
+.login_submit {
+  width: 15%;
+  margin-left: 5%;
+  vertical-align: middle;
+  border-radius: 10% / 20%;
+  color: #4279bd;
+}
+
+.profile {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.profile img {
+  margin-left: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile p {
+  display: inline-block;
+  font-size: 3.5vw;
+  margin: 0;
+  margin-left: 3%;
+}
+
+.profile div a {
+  display: inline-block;
+  font-size: 3.5vw;
+  margin: 0;
+  margin-left: 3%;
+  margin-top: 2.5%;
+  color: #4279bd;
+}
+
+.profile div {
+  vertical-align: middle;
+  width: 50%;
+  margin-left: 3%;
+}
+
+.profile button {
+  font-size: 3.5vw;
+  background-color: #eeeeee;
+  color: #4279bd;
+  border: none;
+  border-radius:10% / 20% ;
 }
 
 .word {
@@ -53,9 +136,31 @@ body a {
   vertical-align: middle;
 }
 
-.search_icon {
- vertical-align: middle;
- margin-left: 22%;
+.search {
+  width: 80%;
+  font-size: 3vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  padding-top: 1%;
+  padding-bottom: 1%;
+  vertical-align: middle;
+  margin-right: 2.5%;
+  border: 0.3vw solid #4279bd;
+  color: #4279bd;
+}
+
+.search_bar {
+  border-top: 0.3vw solid #4279bd;
+  padding-left: 2.5%;
+  border-bottom: 0.3vw solid #4279bd;
+}
+
+.submit {
+  width: 5%;
+  height: 5%;
+  vertical-align: middle;
+  margin-left: 6%;
 }
 
 .slide {
@@ -165,4 +270,3 @@ body a {
 .register a {
   color: #4279bd;
   font-size: 4vw;
-  

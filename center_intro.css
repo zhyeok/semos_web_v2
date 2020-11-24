@@ -38,41 +38,8 @@ body a {
   text-decoration: none;
 }
 
-.category {
-  margin: 0;
-  background-color: #eeeeee;
-  text-align: center;
-  border-bottom: 0.2vw solid #7a7a7a;
-  padding-top: 12%;
-}
-
-.category p{
-  font-size: 5vw;
-  margin: 0;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  color: #7a7a7a;
-}
-
-.center_category a {
-  font-size: 4vw;
-  margin-left: 3%;
-  margin-right: 3%;
-  text-decoration: none;
-  color: #7a7a7a;
-  
-  margin-top: 2%;
-  margin-bottom: 2%;
-  
-}
-
-.center_category{
-  text-align: center;
-  padding-top: 1%;
-  padding-bottom: 2%;
-  vertical-align: middle;
-  background-color: #eeeeee;
-}
+.coach_img {
+  padding-top: 10.5vw;}
 
 .coach_intro {
   margin-top: 3%;
@@ -103,56 +70,6 @@ body a {
   margin-right: 2.5%;
 }
 
-.option {
-  margin-top: 3%;
-  margin-bottom: 5%;
-}
-
-.option_1 {
-  padding-top: 4%;
-  padding-bottom: 4%;
-  border-bottom: 0.2vw solid #eeeeee;
-  
-}
-
-.option_1 p {
-  font-size: 4vw;
-  margin-left: 2.5%;
-  display: inline-block;
-  color: #7a7a7a;
-  
-}
-
-.option_1 select {
-  margin-left: 5%;
-  width: 70%;
-  height: 6vw;
-  font-size: 3vw;
-  color: #7a7a7a;
-  background-color: #eeeeee;
-}
-
-.option_2 {
-  padding-top: 4%;
-  padding-bottom: 4%;
-  border-bottom: 0.2vw solid #eeeeee;
-}
-
-.option_2 p {
-  font-size: 4vw;
-  margin-left: 2.5%;
-  display: inline-block;
-  color: #7a7a7a;
-}
-
-.option_2 select {
-  margin-left: 5%;
-  width: 70%;
-  height: 6vw;
-  font-size: 3vw;
-  color: #7a7a7a;
-  background-color: #eeeeee;
-}
 
 .coach_data {
   padding-top: 3%;
@@ -162,13 +79,13 @@ body a {
 }
 
 
-
 .data p {
   display: inline-block;
   font-size: 4vw;
   color: #7a7a7a;
   margin-left: 2.5%;
   vertical-align: middle;
+  width: 80%;
 }
   
 
@@ -223,6 +140,7 @@ body a {
   font-size: 3vw;
   color: #7a7a7a;
   margin-left: 2.5%;
+  vertical-align: middle;
 }
 
 .address button {
@@ -253,7 +171,7 @@ body a {
 }
 
 .call {
-  width: 37%;
+  width: 36%;
   margin: 0;
   height: 17vw;
   border: none;
@@ -264,7 +182,7 @@ body a {
 }
 
 .catting {
-  width: 37%;
+  width: 36%;
   margin: 0;
   height: 17vw;
   border: none;
@@ -281,4 +199,5 @@ body a {
   bottom: 0;
   background-color: #7a7a7a;
   width: 100%;
+  text-align: center;
 }

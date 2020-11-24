@@ -23,16 +23,29 @@
     <p style="font-size: 4vw; color: #7a7a7a;"><b><?=$_GET['id']?> 정보를 정확히 적어주세요!</b></p>
   </div>
 
-  <form action="index.php?type=<?=$_GET['type']?>" enctype="multipart/form-data" method="POST">
+  <form action="center_register.php?type=<?=$_GET['type']?>" enctype="multipart/form-data" method="POST">
     
     <div class="name">
       <p style="display: inline-block;"><?=$_GET['id']?> 이름 :</p>
       <input type="text" name="name" placeholder="<?=$_GET['id']?> 이름을 적어주세요" required />
+      <
     </div>
-    
+
+    <div class="id">
+      <p style="display: inline-block;"><?=$_GET['id']?> ID :</p>
+      <input type="text" name="patner_id" placeholder="<?=$_GET['id']?> ID" required maxlength="10" />
+      <p><b>최대 10글자</b></p>
+      <p><b><?=$_GET['id']?> 확인시에 사용됩니다</b></p>
+    </div>
+
     <div class="address">
       <p style="display: inline-block;"><?=$_GET['id']?> 주소 :</p>
-      <input type="text" name="address" placeholder="주소를 적어주세요" required />
+      <input type="text" name="address" id="sample6_address" placeholder="주소" />
+      <input type="button" class="search_button" onclick="sample6_execDaumPostcode()" value="주소 검색" />
+      <input type="text" name="detailed_address" id="sample6_detailAddress" placeholder="상세주소" required /></br>
+      <input type="text" id="sample6_extraAddress" placeholder="참고항목" />
+      <input type="text "name="sigungu" id="sample6_sigungu" placeholder="시/군/구" />
+      <input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호"/>
     </div>
 
     <div class="tel">
@@ -114,6 +127,54 @@
 
  
   </form>
+
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function sample6_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    
+                    var addr = ''; 
+                    var extraAddr = ''; 
+    
+                    
+                    if (data.userSelectedType === 'R') { 
+                        addr = data.roadAddress;
+                    } else { 
+                        addr = data.jibunAddress;
+                    }
+    
+                    
+                    if(data.userSelectedType === 'R'){
+                        
+                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                            extraAddr += data.bname;
+                        }
+                        
+                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                        }
+                        
+                        if(extraAddr !== ''){
+                            extraAddr = ' (' + extraAddr + ')';
+                        }
+                        
+                        document.getElementById("sample6_extraAddress").value = extraAddr;
+                    
+                    } else {
+                        document.getElementById("sample6_extraAddress").value = '';
+                    }
+    
+                    
+                    document.getElementById('sample6_postcode').value = data.zonecode;
+                    document.getElementById("sample6_address").value = addr;
+                    document.getElementById("sample6_sigungu").value = data.sigungu;
+                    
+                    document.getElementById("sample6_detailAddress").focus();
+                }
+            }).open();
+        }
+    </script>
 
 </body>
 </html>

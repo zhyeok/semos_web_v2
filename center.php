@@ -36,8 +36,8 @@
     $list = $list."<div class='product'>
     <img src=\"{$row['img']}\" width='90%'/></br>
     <a href=\"{$filtered_type}_intro.php?id={$row['id']}&type=$filtered_type\">[{$row['category']}] </br>{$row['name']}</a></br>
-    <p>위치 :{$row['address']}</p>
-    <p>전화번호 : {$row['phone_number']}) {$row['phone_number_2']}</p>
+    <p><img class='address' src='./아이콘_소스/주소-아이콘.png' />  {$row['sigungu']}</p>
+    <p><img class='jjim' src='./아이콘_소스/공통_아이콘/찜.png' />   100</p>
     </div>";
   }
   
@@ -48,7 +48,24 @@
 
   $select = "<a href=\"center.php?type=center&sport=$filtered_sport\">센터 선택</a>
   <a href=\"center.php?type=coach&sport=$filtered_sport\">강사 선택</a>";
+  
+  $slide = 1;
+  $img_list = '';
+  while($slide < 4) {
+    $img_list = $img_list."<div class='mySlides fade'>
+    <div class='numbertext'>$slide / 3</div>
+    <img src='./아이콘_소스/{$slide}센터선택_이미지.png' style='width:100%'>
+    <div class='text'>{$filtered_type}</div>
+    </div>";
+    $slide+=1;
+  }
 
+  $dot = 0;
+  $dot_list = '';
+  while($dot < 3) {
+    $dot_list = $dot_list."<span class='dot' onclick='currentSlide({$dot})'></span>";
+    $dot+=1;
+  }
   ?>
 
   <div class="top">
@@ -75,20 +92,77 @@
     <?=$link?>
   </div>
 
-  <div class="slider">
-    <img src="아이콘_소스/3센터선택_이미지.png" width="100%"/>
+  <div class="slideshow-container">
+  
+    <?=$img_list?>
+
+    <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlides(1)">&#10095;</a>
+
+  </div><br/>
+  
+  
+  <div style="text-align:center">
+      <?=$dot_list?>
   </div>
 
   <div class="center_list">
 
     <div class="center_intro">
       <p><b>총 <?=$count?>개의 세모스 파트너가 있습니다.</b></p>
-      <img class="center_count" src="아이콘_소스/공통_아이콘/정렬방식.png" width="18%" />
     </div>
     
   </div>
   
   <div><?=$list?></div>
+
   
+  <script>
+    var slideIndex = 0; //slide index
+
+    // HTML 로드가 끝난 후 동작
+    window.onload=function(){
+      showSlides(slideIndex);
+
+    }
+
+
+    // Next/previous controls
+    function moveSlides(n) {
+      slideIndex = slideIndex + n
+      showSlides(slideIndex);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      slideIndex = n;
+      showSlides(slideIndex);
+    }
+
+    function showSlides(n) {
+
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      var size = slides.length;
+
+      if ((n+1) > size) {
+        slideIndex = 0; n = 0;
+      }else if (n < 0) {
+        slideIndex = (size-1);
+        n = (size-1);
+      }
+
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[n].style.display = "block";
+      dots[n].className += " active";
+    }
+  </script>
+
 </body>
 </html>

@@ -16,17 +16,16 @@
   
 }
 
-.search {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
+
 
 .top {
+  width: 100%;
   position: fixed;
   border: 0.5vw solid white; 
   padding-top: 2% ;
   padding-bottom: 2% ;
   background-color: white;
+  border-bottom: 0.3vw solid #4279bd ;
 }
 
 body {
@@ -39,25 +38,27 @@ body a {
 }
 
 .user_profile {
-  padding-top: 15%;
-  padding-left: 10%;
+  padding-top: 13vw;
   padding-bottom: 3%;
   border-bottom: 0.5vw solid #4279bd;
   
 }
 
 .user_profile img {
- 
+  vertical-align: middle;
+  margin-left: 20%;
 }
 
 .profile_word {
   display: inline-block;
-  margin-left: 5%;
-  
+  margin-left: 5%; 
+  vertical-align: middle;
 }
 
 .profile_word p {
   color: #4279bd;
+  margin: 0;
+  margin-top: 2%;
 }
 
 .my_page div {
