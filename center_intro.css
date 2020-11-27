@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "나눔스퀘어";
-  src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-
 .side_bar {
   margin-left: 2.5%;
   margin-right: 2.5%;
@@ -16,13 +9,9 @@
   
 }
 
-.search {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
 
 .top {
-  position: fixed;
+  position: top;
   border: 0.5vw solid white; 
   padding-top: 2% ;
   padding-bottom: 2% ;
@@ -38,13 +27,80 @@ body a {
   text-decoration: none;
 }
 
-.coach_img {
-  padding-top: 10.5vw;}
+
+.semos_only {
+  margin-bottom: 7%;
+  margin-left: 2.5%;
+  color: #4279bd;
+  font-size: 4vw; 
+}
+
+.product_word {
+  margin-bottom: 7%;
+  color: #4279bd;
+  font-size: 5vw;
+  text-align: center;
+}
+
+.semos_only_product {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 3vw;
+  border-bottom: 0.3vw solid #4279bd;
+  margin-bottom: 4%;
+}
+
+.semos_only_product .service {
+  margin-bottom: 4%;
+  color: #7a7a7a;
+  width: 70%;
+  font-size: 4vw;
+  border-bottom: 0.3vw solid #4279bd;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #4279bd;
+  padding-left: 2%;
+}
+
+.semos_only_product .reservation {
+  border: 0.3vw solid #4279bd;
+  border-radius: 10% / 30%;
+  font-size: 4vw;
+  display: inline-block;
+  background-color: #eeeeee;
+  padding: 0.5%;
+  color: #4279bd;
+}
+
+.semos_only_product .service_info {
+    font-size: 3vw;
+    width: 85%;
+    height: 15vw;
+    border-bottom: 0.3vw solid #4279bd;
+    margin-bottom: 3%;
+    color: #4279bd;
+    padding-left: 0.5%;
+    padding-left: 2%;
+}
+
+.price {
+    text-align: right;
+    color: #4279bd;
+    font-size: 4vw;
+    display: inline-block;
+    width: 65%;
+}
+
+.coach_product {
+  
+}
+
 
 .coach_intro {
   margin-top: 3%;
   padding-bottom: 3%;
   border-bottom: 0.5vw solid #eeeeee ;
+  
 }
 
 .coach_intro p {
@@ -94,35 +150,7 @@ body a {
   vertical-align: middle;
 }
 
-.product_word {
-  margin-bottom: 7%;
-  margin-left: 2.5%;
-  color: #4279bd;
-  font-size: 5vw;
-}
 
-.semos_only_product {
-  margin-left: 5%;
-  margin-right: 5%;
-  font-size: 4vw;
-  border-bottom: 0.4vw solid #eeeeee;
-}
-
-.semos_only_product p {
-  margin-bottom: 7%;
-  color: #7a7a7a;
-}
-
-.required {
-  border: 0.2vw solid #7a7a7a;
-  border-radius: 10%;
-  display: inline-block;
-  background-color: #eeeeee;
-}
-
-.coach_product {
-  margin-bottom: 5%;
-}
 
 .map_img {
   margin-left: 2.5%;
@@ -200,4 +228,100 @@ body a {
   background-color: #7a7a7a;
   width: 100%;
   text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -5%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 3vw;
+  padding: 1% 0;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 3vw;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 3vw;
+  width: 3vw;
+  margin: 0 0.5%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4279bd;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

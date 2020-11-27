@@ -14,6 +14,7 @@
   $username = "root";
   $password = "ily153153";
   $dbname = "semos";
+  $dbname2 = "service_product";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -44,10 +45,45 @@
   $Information = $row2['Information'];
   $address = $row2['address'];
   $detail_address = $row2['detail_address'];
+
+  $slide = 1;
+  $img_list = '';
+  while($slide < 4) {
+    $img_list = $img_list."<div class='mySlides fade'>
+    <div class='numbertext'>$slide / 3</div>
+    <img src='./아이콘_소스/{$slide}센터선택_이미지.png' style='width:100%'>
+    <div class='text'>{$name}</div>
+    </div>";
+    $slide+=1;
+  }
+
+  $dot = 0;
+  $dot_list = '';
+  while($dot < 3) {
+    $dot_list = $dot_list."<span class='dot' onclick='currentSlide({$dot})'></span>";
+    $dot+=1;
+  }
+
+
+  $conn5 = mysqli_connect($servername, $username, $password, $dbname2);
+
+  $sql5 = "SELECT * FROM `$name`";
+  $result5 = mysqli_query($conn5, $sql5);
+
+  $service = '';
+  while($row5 = mysqli_fetch_array($result5)) {
+    $service = $service."<div class='semos_only_product'>
+    <p class='service'>{$row5['service_product']}</p>
+    <p class='service_info'>{$row5['service_info']}</p>
+    <p class='reservation'>{$row5['reservation']}</p>
+    <p class='price'>{$row5['service_price']} 원</p>
+    </div>";
+  }
+  
   ?>
  
   <div class="top">
-    <a href="menu.html">        
+    <a href="menu.php">        
       <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
     </a>  
 
@@ -57,8 +93,18 @@
 
   </div>
 
-  <div class= "coach_img">
-    <img src="<?=$img?>" width="100%"/>
+  <div class="slideshow-container">
+  
+  <?=$img_list?>
+
+    <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlides(1)">&#10095;</a>
+
+  </div>
+
+
+  <div style="text-align:center">
+      <?=$dot_list?>
   </div>
 
   <div class="coach_intro">
@@ -97,21 +143,10 @@
   </div>
 
   <div class="coach_product">
-    <p class="product_word"><b>세모스 ONLY</b></p>
-    <div class="semos_only_product">
-      <p><b>[세모스 추천] 어린이 수영 일일체험권[48개월 ~</br>13세까지 이용가능]</b></p>
-      <p class="required"><b>예약필수</b></p>
-    </div>
+  <p class="semos_only"><b>세모스 ONLY</b></p>
+      
 
-    <div class="semos_only_product">
-      <p><b>[세모스 추천] 성인 수영 1개월 [주 4회 강습] +</br>주 1회 자유 수영</b></p>
-      <p class="required"><b>예약필수</b></p>
-    </div>
-
-    <div class="semos_only_product">
-      <p><b>[세모스 추천] 주 1회 어린이 수영 정규반 6개월 +</br>학습진도표 6회</b></p>
-      <p class="required"><b>예약필수</b></p>
-    </div>
+      <?=$service?>
 
   </div>
 
@@ -142,6 +177,58 @@
 
 
   </div>
+
+  <script>
+
+    function click(e) {
+      
+    }
+
+    var slideIndex = 0; //slide index
+
+    // HTML 로드가 끝난 후 동작
+    window.onload=function(){
+      showSlides(slideIndex);
+
+    }
+
+
+    // Next/previous controls
+    function moveSlides(n) {
+      slideIndex = slideIndex + n
+      showSlides(slideIndex);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      slideIndex = n;
+      showSlides(slideIndex);
+    }
+
+    function showSlides(n) {
+
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      var size = slides.length;
+
+      if ((n+1) > size) {
+        slideIndex = 0; n = 0;
+      }else if (n < 0) {
+        slideIndex = (size-1);
+        n = (size-1);
+      }
+
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[n].style.display = "block";
+      dots[n].className += " active";
+    }
+  </script>
 
 </body>
 </html>

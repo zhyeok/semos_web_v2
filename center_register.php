@@ -3,7 +3,6 @@
 
 <head>
   <title>semos.kr</title>
-  <link rel="stylesheet" href="center.css">
   <meta charset="utf-8">
 </head>
 

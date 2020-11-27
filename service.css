@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "나눔스퀘어";
+    src:url("./Nanum/NanumSquareB.ttf") format("truetype"),
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+  
+  .side_bar {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  
+  .semos {
+    margin-left: 24%;
+    margin-right: 24%;
+    
+  }
+  
+  
+  .top {
+    position: fixed;
+    border: 0.5vw solid white; 
+    padding-top: 2% ;
+    padding-bottom: 2% ;
+    background-color: white;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "나눔스퀘어", "Nanum Gothic";
+  }
+  
+  body a {
+    text-decoration: none;
+  }
+  
+
+  .semos_only {
+    margin-bottom: 7%;
+    margin-left: 2.5%;
+    color: #4279bd;
+    font-size: 4vw; 
+  }
+
+.product_word {
+    margin-bottom: 7%;
+    color: #4279bd;
+    font-size: 5vw;
+    text-align: center;
+  }
+  
+  .semos_only_product {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 3vw;
+    border-bottom: 0.3vw solid #4279bd;
+    margin-bottom: 4%;
+  }
+  
+  .semos_only_product input {
+    margin-bottom: 3%;
+    color: #7a7a7a;
+    width: 70%;
+    font-size: 4vw;
+    border: 0.3vw solid #4279bd;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  
+  .semos_only_product select {
+    border: 0.3vw solid #4279bd;
+    border-radius: 10% / 30%;
+    font-size: 4vw;
+    display: inline-block;
+    background-color: #eeeeee;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 3%;
+  }
+  
+  .semos_only_product textarea {
+      font-size: 3vw;
+      width: 70%;
+      height: 150px;
+      border: 0.3vw solid #4279bd;
+      margin-bottom: 3%;
+  }
+
+  .price {
+      margin-left: 40%;
+      
+  }
+
+  .coach_product {
+    margin-bottom: 5%;
+    padding-top: 11vw;
+  }
+
+  .submit_div {
+    text-align: center;
+  }
+
+  .submit{
+      text-align: center;
+      font-size: 4vw;
+      color: #4279bd;
+      border: 0.3vw solid #4279bd;
+      padding: 1% 2%;
+      width: 20%;
+      border-radius: 10% / 20%;
+      margin-bottom: 3%;
+  }

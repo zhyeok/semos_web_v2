@@ -10,6 +10,7 @@
 
   <?php
     session_start();
+    
 
     $user_name = $_SESSION['name'];
     if(!isset($_SESSION['id']) && !isset($_SESSION['pw'])) {
@@ -31,7 +32,7 @@
       <img src='./아이콘_소스/공통_아이콘/프로필.png' width='15%'/>
       <div style='display: inline-block;'>
         <p><b>{$user_name}님 환영합니다.</b></p></br>
-        <a href='./my_semos.html'><b>MY SEMOS</b></a>
+        <a href='./my_semos.php'><b>MY SEMOS</b></a>
       </div>
       <button id='logout'><a href='./logout.php'><b>로그아웃</b></a></button>
       
@@ -41,11 +42,11 @@
   ?>
 
   <div class="top">
-    <a href="menu.html">        
+    <a href="./menu.php">        
       <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
     </a>  
 
-    <a href="" class="semos">
+    <a href="./index.php" class="semos">
       <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
     </a>  
     

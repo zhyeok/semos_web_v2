@@ -11,6 +11,19 @@
 
   <?php
     session_start();
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "ily153153";
+    $dbname = "semos";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    $sql = "SELECT * FROM member WHERE user_id = '{$_SESSION['id']}'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
+    $tier = $row['tier'];
+
     $user_name = $_SESSION['name'];
     if(!isset($_SESSION['id']) && !isset($_SESSION['pw'])) {
       echo "<script>alert('로그인이 필요합니다.'); location.replace('index.php');</script>";;
@@ -20,10 +33,50 @@
       <img src='./아이콘_소스/공통_아이콘/프로필.png' width='15%' />
       <div class='profile_word'>
         <p style='font-size: 5vw;'><b>{$user_name}님</b></p>
-        <p style='font-size: 3vw;'><b>관리자</b></p>
+        <p style='font-size: 3vw;'><b>{$tier}</b></p>
       </div>
     </div>";
     }
+
+    
+    
+
+    if($tier === '세모스') {
+      $mypage = "";
+      $mypage = $mypage."
+      <div>
+        <a href='insert.php?id=센터&type=center'><b>센터 등록</b></a>
+      </div>
+
+      <div>
+        <a href='insert.php?id=강사&type=coach'><b>강사 등록</b></a>
+      </div>
+      
+      <div>
+        <a href='service.php?type=center'><b>센터 서비스 상품 등록</b></a>
+      </div>";
+    } else if($tier === '관리자') {
+      $mypage = "";
+      $mypage = $mypage."
+      <div>
+        <a href='register.php'><b>센터 / 강사 정보 수정</b></a>
+      </div>
+      
+      <div>
+        <a href='semos_pick.html'><b>서비스 상품 등록 / 수정</b></a>
+      </div>";
+    } else if($tier === '일반회원') {
+      $mypage = "";
+      $mypage = $mypage."
+      <div>
+        <a href='register.php'><b>내 정보 수정</b></a>
+      </div>
+      
+      <div>
+        <a href='semos_pick.html'><b>MY PICK</b></a>
+      </div>";
+    }
+  
   ?>
 
 <div class="top">
@@ -40,37 +93,12 @@
   <?=$profile?>
 
   <div class="my_page">
-    <div>
-      <a href="profile.html"><b>회원정보 수정</b></a>
-    </div>
-    
-    <div>
-      <a href="semos_pick.html"><b>MY 세모스 마켓</b></a>
-    </div>
-
-    <div>
-      <a><b>MY PICK</b></a>
-    </div>
-
-    <div style="margin-left: 5%;" class="pick">
-      <a href="center_pick.html" style="color: #7a7a7a; font-size: 3vw; display: block;"><b>센터 / 강사 PICK</b></a>
-      <a href="market_pick.html" style="color: #7a7a7a; font-size: 3vw; display: block; margin-top: 3%;"><b>마켓 PICK</b></a>
-    </div>
-
-    <div>
-      <a><b>고객만족센터</b></a>
-    </div>
-
-    <div style="margin-left: 5%;" class="pick">
-      <a href="notice.html"  style="color: #7a7a7a; font-size: 3vw; display: block;"><b>공지사항</b></a>
-      <a href="FAQ.html" style="color: #7a7a7a; font-size: 3vw; display: block; margin-top: 3%;"><b>FAQ</b></a>
-    </div>
-
+    <?=$mypage?>
   </div>
 
-  <div class="bottom">
-  <p></p>
-  </div>
+    <div class="bottom">
+    <p></p>
+    </div>
 
 </body>
 </html>

@@ -5,6 +5,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
+body {
+  font-family: "나눔스퀘어", "Nanum Gothic";
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
 .side_bar {
   margin-left: 2.5%;
   margin-right: 2.5%;
@@ -16,62 +25,111 @@
   
 }
 
-.search {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
+
 
 .top {
+  width: 100%;
   position: fixed;
   border: 0.5vw solid white; 
   padding-top: 2% ;
   padding-bottom: 2% ;
   background-color: white;
+  border-bottom: 0.3vw solid #4279bd ;
 }
 
-body {
-  margin: 0;
-  font-family: "나눔스퀘어", "Nanum Gothic";
-}
-
-body a {
-  text-decoration: none;
-}
-
-.user_profile {
-  padding-top: 15%;
-  padding-left: 10%;
-  padding-bottom: 5%;
-  border-bottom: 0.5vw solid #4279bd;
+.login {
+  text-align: center;
   
 }
 
-.user_profile img {
-  vertical-align: middle;
+.login input{
+  font-size: 4vw;
+  border: 0.3vw solid #4279bd;
+  color: #7a7a7a;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
 }
 
-.profile_word {
-  display: inline-block;
-  margin-left: 5%;
-  vertical-align: middle;
+.login form {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
 }
 
-.profile_word button {
-  margin-top: 4%;
-  border: none;
-  background-color: white;
+.login a {
   font-size: 3vw;
   color: #7a7a7a;
+
 }
 
-.profile_word button a {
-  text-decoration: none;
-  color: #7a7a7a;
+.login div {
+  text-align: right;
+  margin-bottom: 1%;
+  margin-right: 5%;
 }
 
-.profile_word p {
+.id {
+  width: 30%;
+  margin-right: 2.5%;
+  vertical-align: middle;
+}
+
+.pw {
+  width: 30%;
+  margin-left: 2.5%;
+  vertical-align: middle;
+}
+
+.login_submit {
+  width: 15%;
+  margin-left: 5%;
+  vertical-align: middle;
+  border-radius: 10% / 20%;
   color: #4279bd;
+}
+
+.profile {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.profile img {
+  margin-left: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile p {
+  display: inline-block;
+  font-size: 3.5vw;
   margin: 0;
+  margin-left: 3%;
+}
+
+.profile div a {
+  display: inline-block;
+  font-size: 3.5vw;
+  margin: 0;
+  margin-left: 3%;
+  margin-top: 2.5%;
+  color: #4279bd;
+}
+
+.profile div {
+  vertical-align: middle;
+  width: 50%;
+  margin-left: 3%;
+}
+
+.profile button {
+  font-size: 3.5vw;
+  background-color: #eeeeee;
+  color: #4279bd;
+  border: none;
+  border-radius:10% / 20% ;
+}
+
+.my_page {
+  border-top: 0.3vw solid #4279bd;
 }
 
 .my_page div {
@@ -88,9 +146,6 @@ body a {
 
 }
 
-.pick a { 
-  
-}
 
 .pick {
   width: 90%;
@@ -100,7 +155,7 @@ body a {
   width: 100%;
   height: 114.3vw;
   background-color: #eeeeee;
-  border-top: 1vw solid #7a7a7a;
+  border-top: 0.3vw solid #4279bd;
   text-align: center;
   
   padding-top: 5%;
