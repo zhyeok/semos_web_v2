@@ -40,7 +40,8 @@
     'weekday'=> mysqli_real_escape_string($conn, $_POST['weekday']),
     'weekend'=> mysqli_real_escape_string($conn, $_POST['weekend']),
     'holiday'=> mysqli_real_escape_string($conn, $_POST['holiday']),
-    'information'=> mysqli_real_escape_string($conn, $_POST['information'])
+    'information'=> mysqli_real_escape_string($conn, $_POST['information']),
+    'partner_id' => mysqli_real_escape_string($conn, $_POST['partner_id'])
   );
   
   
@@ -57,8 +58,8 @@
 
     if(move_uploaded_file($_FILES['img']['tmp_name'],"{$filtered['file_link']}")) 
     {
-      $sql = "INSERT INTO $db_type (name, sigungu, category, phone_number, phone_number_2, phone_number_3, img, sport)
-      VALUES('{$filtered['name']}', '{$filtered['sigungu']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['phone_number_3']}', '{$filtered['file_link']}', '{$filtered['type']}')";
+      $sql = "INSERT INTO $type (name, sigungu, category, phone_number, phone_number_2, phone_number_3, img, sport, partner_id)
+      VALUES('{$filtered['name']}', '{$filtered['sigungu']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['phone_number_3']}', '{$filtered['file_link']}', '{$filtered['type']}', '{$filtered['partner_id']}')";
       $result = mysqli_query($conn,$sql);
     } 
     else
@@ -70,8 +71,8 @@
   {
     if(move_uploaded_file($_FILES['img']['tmp_name'],"{$filtered['file_link']}")) 
     {
-      $sql = "INSERT INTO $db_type (name, sigungu, category, phone_number, phone_number_2, phone_number_3, img, sport)
-      VALUES('{$filtered['name']}', '{$filtered['sigungu']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['phone_number_3']}', '{$filtered['file_link']}', '{$filtered['type']}')";
+      $sql = "INSERT INTO $type (name, sigungu, category, phone_number, phone_number_2, phone_number_3, img, sport, partner_id)
+      VALUES('{$filtered['name']}', '{$filtered['sigungu']}', '{$filtered['category']}', '{$filtered['phone_number']}', '{$filtered['phone_number_2']}', '{$filtered['phone_number_3']}', '{$filtered['file_link']}', '{$filtered['type']}', '{$filtered['partner_id']}')";
       $result = mysqli_query($conn,$sql);
     } 
     else
@@ -84,9 +85,10 @@
   $result2 = mysqli_query($conn, $sql2);
   $row2 = mysqli_fetch_array($result2);
 
-  $page = $db_type._page;
+  $page = $type._page;
+  $page_id = $type._id;
 
-  $sql3 = "INSERT INTO $page (center_id, facility, weekday, weekend, holiday, information, address, detail_address, postcode)
+  $sql3 = "INSERT INTO $page ({$page_id}, facility, weekday, weekend, holiday, information, address, detail_address, postcode)
   VALUES('{$row2['id']}', '{$filtered['facility']}', '{$filtered['weekday']}', '{$filtered['weekend']}', '{$filtered['holiday']}', '{$filtered['information']}', '{$filtered['address']}', '{$filtered['detail_address']}', '{$filtered['postcode']}')";
   $result3 = mysqli_query($conn, $sql3);
   echo("<script>location.replace('complete.html');</script>");

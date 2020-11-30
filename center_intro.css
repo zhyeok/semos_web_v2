@@ -92,7 +92,7 @@ body a {
 }
 
 .coach_product {
-  
+  border-bottom: 0.5vw solid #eeeeee;
 }
 
 
@@ -130,7 +130,7 @@ body a {
 .coach_data {
   padding-top: 3%;
   padding-bottom: 3%;
-  border-bottom: 1vw solid #eeeeee;
+  border-bottom: 0.5vw solid #eeeeee;
   
 }
 
@@ -150,39 +150,30 @@ body a {
   vertical-align: middle;
 }
 
-
-
-.map_img {
-  margin-left: 2.5%;
-  border-radius: 10%;
+#map {
+  width: 90%;
+  height: 60vw;
+  margin-left: 5%;
+  margin-top: 3%;
+  border: 0.3vw solid #4279bd;
 }
 
-.address img {
-  width: 5%;
+.map p {
+  font-size: 3vw;
+  margin: 0;
+  color: #4279bd;
   margin-left: 2.5%;
-  vertical-align: middle;
-}
-
-.address p {
   display: inline-block;
-  font-size: 3vw;
-  color: #7a7a7a;
-  margin-left: 2.5%;
   vertical-align: middle;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 
-.address button {
-  border: none;
-  background-color: white;
-  font-size: 3vw;
-  color: #7a7a7a;
-  margin-left: 22%;
-  font-family: 나눔스퀘어;
-}
-
-.map {
-  margin-bottom: 19vw;
-  border-bottom: 1vw solid #eeeeee;
+.map img {
+  margin-top: 1%;
+  margin-left: 5%;
+  vertical-align: middle;
+  margin-bottom: 2%;
 }
 
 .heart {

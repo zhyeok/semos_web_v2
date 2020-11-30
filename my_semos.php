@@ -38,9 +38,6 @@
     </div>";
     }
 
-    
-    
-
     if($tier === '세모스') {
       $mypage = "";
       $mypage = $mypage."
@@ -63,7 +60,7 @@
       </div>
       
       <div>
-        <a href='semos_pick.html'><b>서비스 상품 등록 / 수정</b></a>
+        <a href='./service.php'><b>서비스 상품 등록 / 수정</b></a>
       </div>";
     } else if($tier === '일반회원') {
       $mypage = "";

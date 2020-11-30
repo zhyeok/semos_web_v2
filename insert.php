@@ -29,20 +29,25 @@
   <form action="center_register.php?type=<?=$_GET['type']?>" enctype="multipart/form-data" method="POST">
 
     <div class="name">
-      <p><b>센터명</b></p>
+      <p><b><?=$_GET['id']?>명</b></p>
       <input type="text" name="name" placeholder="<?=$_GET['id']?> 이름을 적어주세요" required />
+    </div>
+
+    <div class="name">
+      <p><b><?=$_GET['id']?> ID</b></p>
+      <input type="text" name="partner_id" placeholder="<?=$_GET['id']?> 아이디를 적어주세요." required />
     </div>
 
     <p class="profile_img"><b>프로필</b></p>  
     <div class="container">
-      <label class="input-file-button" for="input-file">
+      <label class="input-file-button" for="input-file" >
         업로드
       </label>
       
-      <input type="file" name="img" id="input-file" accept="image/*" onchange="setThumbnail(event);"/> 
+      <input type="file" name="img" id="input-file" accept="image/*" onchange="setThumbnail(event);" /> 
       
       <div id="image_container">
-    
+        <img id="preview" src="">
       </div>
 
       <div class="category">
@@ -68,11 +73,11 @@
     <div class="address">
       <p style="display: inline-block;"><b><?=$_GET['id']?> 주소</b></p></br>
       <div>
-        <input type="text" name="address" id="sample6_address" placeholder="주소" readonly />
-        <input type="button" class="search_button" onclick="sample6_execDaumPostcode()" value="주소 검색" />
+        <input type="text" name="address" id="sample6_address" placeholder="주소" readonly/>
+        <input type="button" class="search_button" onclick="sample6_execDaumPostcode()" value="주소 검색"  />
         <input type="text" name="detailed_address" id="sample6_detailAddress" placeholder="상세주소" required /></br>
         <input type="text "name="sigungu" id="sample6_sigungu" placeholder="시/군/구" readonly />
-        <input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호" readonly />
+        <input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호" readonly/>
       </div>
     </div>
 
@@ -140,13 +145,28 @@
   <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     
   <script>
+    function setThumbnail() {
+      var file = document.querySelector('#input-file');
+
+      file.onchange = function () { 
+        var fileList = file.files ;
+              
+        // 읽기
+        var reader = new FileReader();
+        reader.readAsDataURL(fileList [0]);
+
+        //로드 한 후
+        reader.onload = function  () {
+        document.querySelector('#preview').src = reader.result ;
+        }; 
+      }; 
+    }
 
     function sample6_execDaumPostcode() {
       new daum.Postcode({
         oncomplete: function(data) {
                     
           var addr = ''; 
-          var extraAddr = ''; 
     
                     
           if (data.userSelectedType === 'R') { 
@@ -154,27 +174,6 @@
           } else { 
             addr = data.jibunAddress;
           }
-    
-                    
-          if(data.userSelectedType === 'R'){
-                        
-            if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-              extraAddr += data.bname;
-            }
-                        
-            if(data.buildingName !== '' && data.apartment === 'Y'){
-              extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-            }
-                        
-            if(extraAddr !== ''){
-              extraAddr = ' (' + extraAddr + ')';
-            }
-                        
-            document.getElementById("sample6_extraAddress").value = extraAddr;
-                    
-            } else {
-              document.getElementById("sample6_extraAddress").value = '';
-            }
     
                     
             document.getElementById('sample6_postcode').value = data.zonecode;
@@ -187,24 +186,7 @@
     }
 
 
-    function setThumbnail(event) { 
-      var reader = new FileReader(); 
-      reader.onload = function(event) {
-         var img = document.createElement("img"); 
-         img.setAttribute("src", event.target.result); 
-         document.querySelector("div#image_container").appendChild(img); 
-      }; 
-         reader.readAsDataURL(event.target.files[0]); 
-    }
-
-
-
-
-
-
-
-
-
+    
 
   </script>
 

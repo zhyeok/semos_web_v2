@@ -69,17 +69,14 @@
   ?>
 
   <div class="top">
-    <a href="menu.html">        
+    <a href="menu.php">        
       <img class="side_bar" src="아이콘_소스/공통_아이콘/메뉴.png" width= "5%" />
     </a>  
 
-    <a href="index.html" class="semos">
+    <a href="index.php" class="semos">
       <img src="아이콘_소스/공통_아이콘/세상의-모든-스포츠.png" width="30%"/>
     </a> 
     
-    <a>
-      <img class="search" src="아이콘_소스/공통_아이콘/검색.png" width="5%"/>
-    </a>
       
   </div>
 

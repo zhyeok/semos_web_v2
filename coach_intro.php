@@ -35,8 +35,9 @@
   $sport = $row['sport'];
 
   $page = $type._page;
+  
 
-  $sql2 = "SELECT * FROM $page WHERE center_id = '{$code}' ";
+  $sql2 = "SELECT * FROM $page WHERE coach_id = '{$code}' ";
   $result2 = mysqli_query($conn, $sql2);
   $row2 = mysqli_fetch_array($result2);
   $facility = $row2['facility'];
@@ -216,7 +217,7 @@
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(37.295572530166375, 127.04564215307609), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        level: 1 // 지도의 확대 레벨
     };  
 
     // 지도를 생성합니다    
